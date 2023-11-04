@@ -2,11 +2,14 @@
 class Attendence{
   final String name;
   final TeacherLocation teacherLocation;
+  final List<int> IPaddress;
 
 
   Attendence({
     required this.name,
-    required this.teacherLocation
+    required this.teacherLocation,
+    required this.IPaddress
+
   });
 
 }

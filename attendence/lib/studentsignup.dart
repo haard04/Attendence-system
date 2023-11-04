@@ -1,3 +1,4 @@
+import 'package:attendence/API/Auth.dart';
 import 'package:flutter/material.dart';
 import 'package:attendence/studentLogin.dart';
 
@@ -6,21 +7,21 @@ class StudentSignUp extends StatelessWidget {
   TextEditingController emailController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
 
-  void _signUp(BuildContext context) {
+  void _signUp(BuildContext context)async {
     String rollNumber = rollNumberController.text;
     String email = emailController.text;
     String password = passwordController.text;
-
+    // await signUpFunction(rollNumber, email, password);
     
     print('Roll Number: $rollNumber');
     print('Email: $email');
     print('Password: $password');
 
     
-    Navigator.push(
-      context,
-      MaterialPageRoute(builder: (context) => studentLogin()),
-    );
+    // Navigator.push(
+    //   context,
+    //   MaterialPageRoute(builder: (context) => studentLogin()),
+    // );
   }
 
   @override
@@ -52,14 +53,16 @@ class StudentSignUp extends StatelessWidget {
             ),
             SizedBox(height: 20.0),
             ElevatedButton(
-              onPressed: () {
+              onPressed: () async{
                 _signUp(context);
               },
               child: Text('Sign Up'),
             ),
             SizedBox(height: 10.0),
             ElevatedButton(
-              onPressed: () {
+              onPressed: () async{
+                  
+
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => studentLogin()),

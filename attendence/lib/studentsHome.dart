@@ -10,7 +10,7 @@ class studentsHome extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Attendence attendence=Attendence(name:"haard",teacherLocation: TeacherLocation(longitude: 101011, lattitude: 10101));
+    Attendence attendence=Attendence(name:"haard",teacherLocation: TeacherLocation(longitude: 101011, lattitude: 10101),IPaddress: [10,1,12,12]);
     
     return Scaffold(
       appBar: AppBar(title: Text('Active Attendece'),),

@@ -39,6 +39,8 @@ dependencies:
   geolocator: ^10.1.0
   geocoding: ^2.1.0
   url_launcher: ^6.1.14
+  get_ip_address: ^0.0.6
+  awesome_dialog: ^3.0.2
 
 dev_dependencies:
   flutter_test:
